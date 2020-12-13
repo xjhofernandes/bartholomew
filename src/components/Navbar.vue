@@ -1,8 +1,8 @@
 <template>
-    <nav class="flex justify-between bg-black p-2">
+    <nav class="flex justify-between bg-black p-5">
         <ul class="flex flex-row items-center ">
-            <li><img class="h-10 pr-5" alt="Vue logo" src="../assets/logo.svg"></li>
-            <li><a class="text-gray-200 italic text-1x" href="#">Bartholomew</a></li>
+            <li><img class="h-12 pr-5" alt="Vue logo" src="../assets/logo.svg"></li>
+            <li><a class="text-gray-200 font-mono italic text-2xl" href="#">Bartholomew</a></li>
         </ul>
         <ul class="flex flex-row items-center ">
             <li class="pr-5 text-gray-200"><router-link to="/">Home</router-link></li>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'NarBar'
+  name: 'NavBar'
 }
 </script>
 
