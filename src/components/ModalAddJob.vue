@@ -19,8 +19,22 @@
             </h3>
             <div class="mt-2">
               <p class="text-sm text-gray-500">
-                Need a help to set a specified cron value? Acess <a class="text-green-600 text-base font-medium  hover:text-green-700" target="_blank" href="http://www.cronmaker.com/;jsessionid=node06e8g4otqx18l1sytqy0uuug8n415398.node0?0">Cron Maker</a> to make your cron expression.
+                Need a help to set a specified cron value? Acess <a class="text-green-600 text-base font-medium hover:text-green-700" target="_blank" href="http://www.cronmaker.com/;jsessionid=node06e8g4otqx18l1sytqy0uuug8n415398.node0?0">Cron Maker</a> to make your cron expression.
               </p>
+            </div>
+            <div class="mt-2">
+              <p>Endpoint:</p>
+              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
+              <div id="v-model-select-dynamic" class="demo">
+              <select v-model="selected">
+                <option disabled value="">Please select one</option>
+                <option v-for="option in options" :key="option" :value="option.value">
+                  {{ option.text }}
+                </option>
+              </select>
+              <span>Selected: {{ selected }}</span>
+            </div>
+
             </div>
           </div>
         </div>
@@ -40,7 +54,16 @@
 
 <script>
 export default {
-  name: 'ModalAddJob'
+  name: 'ModalAddJob',
+  data() {
+    return {
+      selected: 'get',
+      options: [
+        { text: 'Get', value: 'get' },
+        { text: 'Post', value: 'post' }
+      ]
+    }
+  }
 }
 </script>
 
