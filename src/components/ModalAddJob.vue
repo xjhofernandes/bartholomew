@@ -1,5 +1,5 @@
 <template>
-<button @click="openModal" class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Add Job</button>
+<button @click="openModal" class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75 float-right">Add Job</button>
   <div v-if="status.active" class="fixed z-10 inset-0 overflow-y-auto">
   <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <div class="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -80,8 +80,8 @@ export default {
     return {
       selected: 'get',
       options: [
-        { text: 'Get', value: 'get' },
-        { text: 'Post', value: 'post' }
+        { text: 'GET', value: 'get' },
+        { text: 'POST', value: 'post' }
       ],
       critical: 'high',
       criticalitys: [
