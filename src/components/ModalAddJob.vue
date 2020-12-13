@@ -1,5 +1,6 @@
 <template>
-  <div class="fixed z-10 inset-0 overflow-y-auto">
+<button @click="openModal" class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">Add Job</button>
+  <div v-if="status.active" class="fixed z-10 inset-0 overflow-y-auto">
   <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <div class="fixed inset-0 transition-opacity" aria-hidden="true">
       <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -30,6 +31,7 @@
               <p>Endpoint:</p>
               <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
             </div>
+
             <div class="mt-2">
               <p>Method:</p>
               <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" v-model="selected">
@@ -39,16 +41,17 @@
                 </option>
               </select>
             </div>
+
             <div class="mt-2">
               <p>Cron Expression:</p>
               <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
             </div>
             <div class="mt-2">
               <p>Criticality:</p>
-              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" v-model="criticality" required>
+              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" v-model="critical" required>
                 <option disabled value="">Please select one</option>
-                <option v-for="criticalit in criticalitys" :key="criticalit" :value="criticalit.value">
-                  {{ criticalit.text }}
+                <option v-for="criticality in criticalitys" :key="criticality" :value="criticality.value">
+                  {{ criticality.text }}
                 </option>
               </select>
             </div>
@@ -59,7 +62,7 @@
           <button type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm">
             Save
           </button>
-          <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+          <button @click="closeModal"  type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
             Cancel
           </button>
         </div>
@@ -69,6 +72,8 @@
 </template>
 
 <script>
+import { reactive } from 'vue';
+
 export default {
   name: 'ModalAddJob',
   data() {
@@ -78,13 +83,28 @@ export default {
         { text: 'Get', value: 'get' },
         { text: 'Post', value: 'post' }
       ],
-      criticality: 'high',
+      critical: 'high',
       criticalitys: [
         {text : 'High', value: 'high'},
         {text : 'Medium', value: 'medium'},
         {text : 'Low', value: 'low'}
       ]
     }
+  },
+  setup(){
+  const status = reactive({
+      active : false
+    });
+
+    function openModal() {
+      status.active = true;
+    }
+
+    function closeModal() {
+      status.active = false;
+    }
+
+    return {openModal, status, closeModal}
   }
 }
 </script>
