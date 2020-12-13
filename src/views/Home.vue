@@ -2,20 +2,20 @@
   <div class="container mx-auto">
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <TableJob/>
+    <ModalAddJob/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import TableJob from '@/components/TableJob.vue'
+import ModalAddJob from '@/components/ModalAddJob.vue'
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
-    TableJob
+    ModalAddJob
   }
 }
 </script>
