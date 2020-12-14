@@ -25,11 +25,11 @@
             </div>
             <div class="mt-2">
               <p>Name:</p>
-              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
+              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 p-2 w-10/12" type="text">
             </div>
             <div class="mt-2">
               <p>Endpoint:</p>
-              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
+              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 p-2 w-10/12" type="text">
             </div>
 
             <div class="mt-2 ">
@@ -47,7 +47,7 @@
 
             <div class="mt-2">
               <p>Cron Expression:</p>
-              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" type="text">
+              <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 p-2 w-10/12" type="text">
             </div>
 
             <div class="mt-2 ">
