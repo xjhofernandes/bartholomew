@@ -34,7 +34,7 @@
 
             <div class="mt-2">
               <p>Method:</p>
-              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" v-model="selected">
+              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8" v-model="selected">
                 <option disabled value="">Please select one</option>
                 <option v-for="option in options" :key="option" :value="option.value">
                   {{ option.text }}
@@ -48,7 +48,7 @@
             </div>
             <div class="mt-2">
               <p>Criticality:</p>
-              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 text-2xl" v-model="critical" required>
+              <select class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8" v-model="critical" required>
                 <option disabled value="">Please select one</option>
                 <option v-for="criticality in criticalitys" :key="criticality" :value="criticality.value">
                   {{ criticality.text }}
