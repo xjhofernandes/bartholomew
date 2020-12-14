@@ -20,7 +20,7 @@
             </h3>
             <div class="mt-2">
               <p class="text-sm text-gray-500">
-                Need a help to set a specified cron value? Acess <a class="text-green-600 text-base font-medium hover:text-green-700" target="_blank" href="http://www.cronmaker.com/;jsessionid=node06e8g4otqx18l1sytqy0uuug8n415398.node0?0">Cron Maker</a> to make your cron expression.
+                Need a help to set a specified Cron value? Acess <a class="text-green-600 text-base font-medium hover:text-green-700" target="_blank" href="http://www.cronmaker.com/;jsessionid=node06e8g4otqx18l1sytqy0uuug8n415398.node0?0">Cron Maker</a> to create your own cron expression.
               </p>
             </div>
             <div class="mt-2">
