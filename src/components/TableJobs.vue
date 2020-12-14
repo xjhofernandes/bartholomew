@@ -36,6 +36,7 @@
                     <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>                    
                     <div class="flex justify-between items-center">
                         <button class="h-10 py-1 px-2 bg-blue-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none">Edit Job</button>                        
+                        <button class="h-10 py-1 px-2 bg-black text-white text-center font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none">Logs</button>                                                
                         <button class="h-10 py-1 px-2 bg-red-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none">Remove Job</button>                        
                     </div>
                 </td>
@@ -65,6 +66,7 @@
                     <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>                    
                     <div class="flex justify-between items-center">
                         <button class="h-10 py-1 px-2 bg-blue-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none">Edit Job</button>                        
+                        <button class="h-10 py-1 px-2 bg-black text-white text-center font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none">Logs</button>                                                
                         <button class="h-10 py-1 px-2 bg-red-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none">Remove Job</button>                        
                     </div>
                 </td>
@@ -94,6 +96,7 @@
                     <span class="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Actions</span>                    
                     <div class="flex justify-between items-center">
                         <button class="h-10 py-1 px-2 bg-blue-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none">Edit Job</button>                        
+                        <button class="h-10 py-1 px-2 bg-black text-white text-center font-semibold rounded-lg shadow-md hover:bg-gray-700 focus:outline-none">Logs</button>                        
                         <button class="h-10 py-1 px-2 bg-red-500 text-white text-center font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none">Remove Job</button>                        
                     </div>
                 </td>
