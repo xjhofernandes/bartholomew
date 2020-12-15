@@ -45,6 +45,11 @@
               </div>
             </div>
 
+            <div v-if="selected === 'post'">
+              <p class="text-sm text-gray-500 pt-1 pb-1">Write your JSON body</p>
+              <textarea class="resize-none border rounded-md w-10/12 h-60 p-4"></textarea>
+            </div>
+
             <div class="mt-2">
               <p>Cron Expression:</p>
               <input class="bg-gray-100 focus:ring-2 focus:ring-gray-300 rounded-md h-8 p-2 w-10/12" type="text">
